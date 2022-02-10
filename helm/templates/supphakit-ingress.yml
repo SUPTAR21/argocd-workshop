@@ -24,3 +24,9 @@ spec:
             backend:
               serviceName: {{ .Values.helloworld.name }}-svc
               servicePort: {{ .Values.helloworld.servicePort }}
+              
+          - path: /pgadmin
+            pathType: {{ .Values.helloworld.pathType }}
+            backend:
+              serviceName: pgadmin
+              servicePort: 80
